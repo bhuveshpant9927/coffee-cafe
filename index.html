@@ -1,0 +1,224 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Coffee Cafe</title>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-brown">
+            <span class="branding w3-bar-item w3-mobile">Coffee Cafe</span>
+            <span class="w3-right w3-mobile">
+      <a class="w3-bar-item w3-button w3-mobile" href="#">Home</a>
+      <a class="w3-bar-item w3-button w3-mobile" href="#about">About</a>
+      <a class="w3-bar-item w3-button w3-mobile" href="#coffee">Our Coffee</a>
+      <a class="w3-bar-item w3-button w3-mobile" href="#contact">Contact</a>
+    </div>
+    </div>
+
+    <!-- Showcase -->
+    <section class="showcase">
+      <div class="w3-container w3-center">
+        <h1 class="w3-text-shadow w3-animate-opacity">Coffee Cafe</h1>
+        <hr class="w3-animate-opacity">
+        <p class="w3-animate-opacity">Never trust anyone who doesn't drink coffee. Our culture runs on coffee and gasoline, the first often tasting like the second. Science may never come up with a better office communication system than the coffee break. The smell of fresh-made coffee is one of the world's greatest inventions</p>
+        <button class="w3-button w3-brown w3-large w3-animate-opacity" onclick="openModal()">Start Here</button>
+      </div>
+    </section>
+
+    <!-- Section 1 -->
+    <section class="section w3-brown w3-hover-opacity">
+      <div class="w3-container w3-center">
+        <i class="material-icons md-36">home</i>
+        <h2>A relaxing environment</h2>
+        <p>Cafes bring back old memories.
+          <br>
+          Slow down and enjoy your coffee.
+          <br>
+          Happiness is a small cozy cafe.
+          </p>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="section w3-grey w3-hover-opacity">
+      <div class="w3-container w3-center">
+        <i class="material-icons md-36">build</i>
+        <h2>A variety of ingredients</h2>
+        <ul>
+          <li>Caffeine</li>
+         <li>Tannin</li>
+          <li>hiamin</li>
+         <li>Xanthine</li>
+          <li>Spermidine</li>
+          <li>Citric Acid</li>
+          <li>Chlorogenic acid</li>
+          <li>Acetaldehyde</li>
+          <li>Spermine</li>
+
+          </ul>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="w3-container">
+        <div class="w3-row-padding">
+          <div class="w3-col m5">
+            <img src="./img/beans.jpg" alt="coffee beans">
+          </div>
+          <div class="w3-col m7">
+            <button onclick="accordionFunction('whatWeDo')" class="w3-btn w3-block w3-brown w3-center-align accordion">What We Do</button>
+            <div id="whatWeDo" class="w3-container w3-show">
+              <h4>The best coffee makers in town</h4>
+              
+            </div>
+            <button onclick="accordionFunction('whoWeAre')" class="w3-btn w3-block w3-brown w3-center-align accordion">Who We Are</button>
+            <div id="whoWeAre" class="w3-container w3-hide">
+              <h4>We're a bunch of friendly dudes with a passion for coffee</h4>
+             
+            </div>
+            <button onclick="accordionFunction('Demo1')" class="w3-btn w3-block w3-brown w3-center-align accordion">Where Can You Find Us</button>
+            <div id="Demo1" class="w3-container w3-hide">
+              <h4>We are mainly located in Bhimtal, Nainital, Uttarakhand</h4>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coffee Section Heading-->
+    <section id="coffee" class="section w3-brown">
+      <div class="w3-container w3-center">
+        <h2 class="w3-text-shadow">Our Coffee</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem veritatis quibusdam non!</p>
+      </div>
+    </section>
+
+    <!-- Coffee Section Features-->
+    <section class="section w3-grey">
+      <div class="w3-container w3-center">
+        <div class="w3-row">
+          <div class="w3-col m3">
+            <i class="material-icons md-24">blur_on</i>
+              <h3>The best coffee beans from around the world.</h3>
+          </div>
+          <div class="w3-col m3">
+            <i class="material-icons md-24">local_dining</i>
+              <h3>Delicious food available to complement your beverage.</h3>
+          </div>
+          <div class="w3-col m3">
+            <i class="material-icons md-24">place</i>
+              <h3>Located at convenient locations around the city.</h3>
+          </div>
+          <div class="w3-col m3">
+            <i class="material-icons md-24">sentiment_very_satisfied</i>
+              <h3>We only hire the best to give you a great experience.</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Heading-->
+    <section id="contact" class="section w3-white">
+      <div class="w3-container w3-center">
+        <h2 class="w3-text-shadow">Get in touch</h2>
+      </div>
+    </section>
+
+
+     <section class="section w3-white">
+      <div class="w3-container">
+        <div class="w3-card-2">
+          <div class="w3-container w3-brown">
+            <h2>Contact Us</h2>
+          </div>
+          <form class="w3-container w3-padding-large">
+            <label class="w3-text-brown"><b>Name : </b>Bhuvesh Pant</label>
+            <!-- <input class="w3-input w3-border w3-round" type="text"> -->
+            <br>
+            <br>
+            <i class="fa fa-envelope icon"></i>
+            <label class="w3-text-brown"><b>Email</b><br>bhuveshpant@gmail.com</label>
+            
+            <!-- <input class="w3-input w3-border w3-round" type="text"> -->
+          <br>
+          <br>
+          <i class='fa fa-phone icon'></i>
+          <label class="w3-text-brown"><b>Phone no</b><br>9411775243</label>
+            <!-- <label class="w3-text-brown"><b>Message</b></label> -->
+            <!-- <textarea class="w3-input w3-border w3-round" style="resize:none"></textarea> -->
+           
+            <!-- <button type="submit" class="w3-btn w3-brown">Submit</button> -->
+          </form>
+        </div>
+      </div>
+    </section>
+<!--
+    <div class="contact-info-container">
+
+      <div class="contact__info">
+        <div class="box">
+          <i class='fa fa-phone icon'></i>
+          <h2>Phone</h2>
+          <p>9411775243</p>
+          <a href="tel:9411775243">Call Now</a>
+       </div>
+ 
+       <div class="box">
+          <i class="fa fa-envelope icon"></i>
+          <h2>Email</h2>
+          <p>bhuveshpant@gmail.com</p>
+       </div>
+      </div>
+
+      <div class="contact__address">
+        
+        <div class="box">
+         
+          <h2>Address</h2>
+          <p> <b>BHIMTAL,INDIA -263136</b></p>
+        </div>
+        <div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13909.91917834611!2d79.5540858!3d29.3562377!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa08407c1dac1f3ac!2sBirla%20Institute%20of%20Applied%20Sciences%2C%20Bhimtal-263136%20(Uttarakhand)!5e0!3m2!1sen!2sin!4v1649257659191!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         
+        </div>
+      </div>
+    </div>
+-->
+
+
+    <!-- Modal/Popup -->
+    <div id="modal" class="w3-modal">
+      <div class="w3-modal-content w3-animate-top w3-round">
+        <header class="w3-container w3-brown">
+          <span onclick="document.getElementById('modal').style.display='none'"
+          class="w3-button w3-display-topright">&times;</span>
+            <h2>Create Order</h2>
+            </header>
+            <form class="w3-container w3-padding-large">
+                <label class="w3-text-brown"><b>Name</b></label>
+                <input class="w3-input w3-border w3-round" type="text">
+                <br>
+                <label class="w3-text-brown"><b>Beverage</b></label>
+                <input class="w3-input w3-border w3-round" type="text">
+                <br>
+                <button class="w3-block w3-section-padding w3-brown">Submit Order</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="https://use.fontawesome.com/98261df5d3.js"></script>
+</body>
+
+</html>
