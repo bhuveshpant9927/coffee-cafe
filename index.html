@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/script.js"></script>
     <title>Coffee Cafe</title>
 </head>
 
@@ -82,13 +83,17 @@
               
             </div>
             <button onclick="accordionFunction('whoWeAre')" class="w3-btn w3-block w3-brown w3-center-align accordion">Who We Are</button>
+            
             <div id="whoWeAre" class="w3-container w3-hide">
               <h4>We're a bunch of friendly dudes with a passion for coffee</h4>
              
             </div>
             <button onclick="accordionFunction('Demo1')" class="w3-btn w3-block w3-brown w3-center-align accordion">Where Can You Find Us</button>
+            
+
             <div id="Demo1" class="w3-container w3-hide">
               <h4>We are mainly located in Bhimtal, Nainital, Uttarakhand</h4>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13909.91917834611!2d79.5540858!3d29.3562377!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa08407c1dac1f3ac!2sBirla%20Institute%20of%20Applied%20Sciences%2C%20Bhimtal-263136%20(Uttarakhand)!5e0!3m2!1sen!2sin!4v1649257659191!5m2!1sen!2sin" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               
             </div>
           </div>
@@ -151,7 +156,7 @@
             <br>
             <br>
             <i class="fa fa-envelope icon"></i>
-            <label class="w3-text-brown"><b>Email</b><br>bhuveshpant@gmail.com</label>
+            <label class="w3-text-brown"><b>Email</b><br><a href=mailto:<bhuveshpant>bhuveshpant@gmail.com</a></label>
             
             <!-- <input class="w3-input w3-border w3-round" type="text"> -->
           <br>
@@ -164,6 +169,8 @@
             <!-- <textarea class="w3-input w3-border w3-round" style="resize:none"></textarea> -->
            
             <!-- <button type="submit" class="w3-btn w3-brown">Submit</button> -->
+            
+
           </form>
         </div>
       </div>
@@ -211,19 +218,42 @@
             <h2>Create Order</h2>
             </header>
             <form class="w3-container w3-padding-large">
-                <label class="w3-text-brown"><b>Name</b></label>
+                <label id="name" class="w3-text-brown"><b>Name</b></label>
                 <input class="w3-input w3-border w3-round" type="text">
                 <br>
-                <label class="w3-text-brown"><b>Beverage</b></label>
+                <label id="beverage" class="w3-text-brown"><b>Beverage</b></label>
                 <input class="w3-input w3-border w3-round" type="text">
                 <br>
                 <button class="w3-block w3-section-padding w3-brown">Submit Order</button>
             </form>
         </div>
     </div>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
 
-    <script src="./js/script.js"></script>
+    
     <script src="https://use.fontawesome.com/98261df5d3.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail(){
+        var Name=$('#name').val();
+        var Beverage=$('#beverage').val();
+        var Body='name: '+Name+'<br>beverage: '+Beverage;
+      }
+        Email.send({
+    Host : "smtp.gmail.com",
+    Username : "pantbhuvesh6@gmail.com",
+    Password : "BHUVESHPANT@1234",
+    To : 'bhuveshpant@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New Contact form Enquiry",
+    Body : "Name:"+document.getElementById("name").value+"<br> Beverage:"+document.getElementById("beverage").value
+
+}).then(
+  message => alert("message sent successfully")
+);
+      
+    </script> 
 </body>
 
 </html>
